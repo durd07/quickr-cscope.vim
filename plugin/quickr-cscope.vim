@@ -144,38 +144,38 @@ endfunction
 
 " Plug mappings {{
 if g:quickr_cscope_use_qf_g
-    nnoremap <silent> <plug>(quickr_cscope_global) :call <SID>quickr_cscope(expand("<cword>"), "g", "", "cs")<CR>
-    vnoremap <silent> <plug>(quickr_cscope_global) :call <SID>quickr_cscope(<SID>get_visual_selection(), "g", "", "cs")<CR>
-    nnoremap <silent> <plug>(quickr_cscope_global_split) :call <SID>quickr_cscope(expand("<cword>"), "g", "", "scs")<CR>
-    vnoremap <silent> <plug>(quickr_cscope_global_split) :call <SID>quickr_cscope(<SID>get_visual_selection(), "g", "", "scs")<CR>
+    nnoremap <silent> <plug>(quickr_cscope_global)            :call <SID>quickr_cscope(expand("<cword>"), "g", "", "cs")<CR>
+    vnoremap <silent> <plug>(quickr_cscope_global)            :call <SID>quickr_cscope(<SID>get_visual_selection(), "g", "", "cs")<CR>
+    nnoremap <silent> <plug>(quickr_cscope_global_split)      :call <SID>quickr_cscope(expand("<cword>"), "g", "", "scs")<CR>
+    vnoremap <silent> <plug>(quickr_cscope_global_split)      :call <SID>quickr_cscope(<SID>get_visual_selection(), "g", "", "scs")<CR>
     nnoremap <silent> <plug>(quickr_cscope_global_vert_split) :call <SID>quickr_cscope(expand("<cword>"), "g", "vert", "scs")<CR>
     vnoremap <silent> <plug>(quickr_cscope_global_vert_split) :call <SID>quickr_cscope(<SID>get_visual_selection(), "g", "vert", "scs")<CR>
 else
-    nnoremap <silent> <plug>(quickr_cscope_global) :cs find g <C-R>=expand("<cword>")<CR><CR>
-    vnoremap <silent> <plug>(quickr_cscope_global) :<C-U>cs find g <C-R>=<SID>get_visual_selection()<CR><CR>
-    nnoremap <silent> <plug>(quickr_cscope_global_split) :scs find g <C-R>=expand("<cword>")<CR><CR>
-    vnoremap <silent> <plug>(quickr_cscope_global_split) :<C-U>scs find g <C-R>=<SID>get_visual_selection()<CR><CR>
+    nnoremap <silent> <plug>(quickr_cscope_global)            :cs find g <C-R>=expand("<cword>")<CR><CR>
+    vnoremap <silent> <plug>(quickr_cscope_global)            :<C-U>cs find g <C-R>=<SID>get_visual_selection()<CR><CR>
+    nnoremap <silent> <plug>(quickr_cscope_global_split)      :scs find g <C-R>=expand("<cword>")<CR><CR>
+    vnoremap <silent> <plug>(quickr_cscope_global_split)      :<C-U>scs find g <C-R>=<SID>get_visual_selection()<CR><CR>
     nnoremap <silent> <plug>(quickr_cscope_global_vert_split) :vert scs find g <C-R>=expand("<cword>")<CR><CR>
     vnoremap <silent> <plug>(quickr_cscope_global_vert_split) :<C-U>vert scs find g <C-R>=<SID>get_visual_selection()<CR><CR>
 endif
 
-nnoremap <silent> <plug>(quickr_cscope_symbols)         :call <SID>quickr_cscope(expand("<cword>"), "s", "", "cs")<CR>
-nnoremap <silent> <plug>(quickr_cscope_callers)         :call <SID>quickr_cscope(expand("<cword>"), "c", "", "cs")<CR>
-nnoremap <silent> <plug>(quickr_cscope_files)           :call <SID>quickr_cscope(expand("<cfile>:t"), "f", "", "cs")<CR>
-nnoremap <silent> <plug>(quickr_cscope_includes)        :call <SID>quickr_cscope(expand("<cfile>:t"), "i", "", "cs")<CR>
-nnoremap <silent> <plug>(quickr_cscope_text)            :call <SID>quickr_cscope(expand("<cword>"), "t", "", "cs")<CR>
-nnoremap <silent> <plug>(quickr_cscope_functions)       :call <SID>quickr_cscope(expand("<cword>"), "d", "", "cs")<CR>
-nnoremap <silent> <plug>(quickr_cscope_egrep)           :call <SID>quickr_cscope(input('Enter egrep pattern: '), "e", "", "cs")<CR>
-nnoremap <silent> <plug>(quickr_cscope_assignments)     :call <SID>quickr_cscope(expand("<cword>"), "a", "", "cs")<CR>
+nnoremap <silent> <plug>(quickr_cscope_symbols)         :call <SID>quickr_cscope(expand("<cword>"), "s", "", "cs")<CR><CR>
+nnoremap <silent> <plug>(quickr_cscope_callers)         :call <SID>quickr_cscope(expand("<cword>"), "c", "", "cs")<CR><CR>
+nnoremap <silent> <plug>(quickr_cscope_files)           :call <SID>quickr_cscope(expand("<cfile>:t"), "f", "", "cs")<CR><CR>
+nnoremap <silent> <plug>(quickr_cscope_includes)        :call <SID>quickr_cscope(expand("<cfile>:t"), "i", "", "cs")<CR><CR>
+nnoremap <silent> <plug>(quickr_cscope_text)            :call <SID>quickr_cscope(expand("<cword>"), "t", "", "cs")<CR><CR>
+nnoremap <silent> <plug>(quickr_cscope_functions)       :call <SID>quickr_cscope(expand("<cword>"), "d", "", "cs")<CR><CR>
+nnoremap <silent> <plug>(quickr_cscope_egrep)           :call <SID>quickr_cscope(input('Enter egrep pattern: '), "e", "", "cs")<CR><CR>
+nnoremap <silent> <plug>(quickr_cscope_assignments)     :call <SID>quickr_cscope(expand("<cword>"), "a", "", "cs")<CR><CR>
 
-vnoremap <silent> <plug>(quickr_cscope_symbols)         :call <SID>quickr_cscope(<SID>get_visual_selection(), "s", "", "cs")<CR>
-vnoremap <silent> <plug>(quickr_cscope_callers)         :call <SID>quickr_cscope(<SID>get_visual_selection(), "c", "", "cs")<CR>
-vnoremap <silent> <plug>(quickr_cscope_files)           :call <SID>quickr_cscope(<SID>get_visual_selection(), "f", "", "cs")<CR>
-vnoremap <silent> <plug>(quickr_cscope_includes)        :call <SID>quickr_cscope(<SID>get_visual_selection(), "i", "", "cs")<CR>
-vnoremap <silent> <plug>(quickr_cscope_text)            :call <SID>quickr_cscope(<SID>get_visual_selection(), "t", "", "cs")<CR>
-vnoremap <silent> <plug>(quickr_cscope_functions)       :call <SID>quickr_cscope(<SID>get_visual_selection(), "d", "", "cs")<CR>
-vnoremap <silent> <plug>(quickr_cscope_egrep)           :call <SID>quickr_cscope(<SID>get_visual_selection(), "e", "", "cs")<CR>
-vnoremap <silent> <plug>(quickr_cscope_assignments)     :call <SID>quickr_cscope(<SID>get_visual_selection(), "a", "", "cs")<CR>
+vnoremap <silent> <plug>(quickr_cscope_symbols)         :call <SID>quickr_cscope(<SID>get_visual_selection(), "s", "", "cs")<CR><CR>
+vnoremap <silent> <plug>(quickr_cscope_callers)         :call <SID>quickr_cscope(<SID>get_visual_selection(), "c", "", "cs")<CR><CR>
+vnoremap <silent> <plug>(quickr_cscope_files)           :call <SID>quickr_cscope(<SID>get_visual_selection(), "f", "", "cs")<CR><CR>
+vnoremap <silent> <plug>(quickr_cscope_includes)        :call <SID>quickr_cscope(<SID>get_visual_selection(), "i", "", "cs")<CR><CR>
+vnoremap <silent> <plug>(quickr_cscope_text)            :call <SID>quickr_cscope(<SID>get_visual_selection(), "t", "", "cs")<CR><CR>
+vnoremap <silent> <plug>(quickr_cscope_functions)       :call <SID>quickr_cscope(<SID>get_visual_selection(), "d", "", "cs")<CR><CR>
+vnoremap <silent> <plug>(quickr_cscope_egrep)           :call <SID>quickr_cscope(<SID>get_visual_selection(), "e", "", "cs")<CR><CR>
+vnoremap <silent> <plug>(quickr_cscope_assignments)     :call <SID>quickr_cscope(<SID>get_visual_selection(), "a", "", "cs")<CR><CR>
 " }}
 
 if g:quickr_cscope_keymaps
