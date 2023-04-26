@@ -144,12 +144,12 @@ endfunction
 
 " Plug mappings {{
 if g:quickr_cscope_use_qf_g
-    nnoremap <silent> <plug>(quickr_cscope_global)            :call <SID>quickr_cscope(expand("<cword>"), "g", "", "cs")<CR>
-    vnoremap <silent> <plug>(quickr_cscope_global)            :call <SID>quickr_cscope(<SID>get_visual_selection(), "g", "", "cs")<CR>
-    nnoremap <silent> <plug>(quickr_cscope_global_split)      :call <SID>quickr_cscope(expand("<cword>"), "g", "", "scs")<CR>
-    vnoremap <silent> <plug>(quickr_cscope_global_split)      :call <SID>quickr_cscope(<SID>get_visual_selection(), "g", "", "scs")<CR>
-    nnoremap <silent> <plug>(quickr_cscope_global_vert_split) :call <SID>quickr_cscope(expand("<cword>"), "g", "vert", "scs")<CR>
-    vnoremap <silent> <plug>(quickr_cscope_global_vert_split) :call <SID>quickr_cscope(<SID>get_visual_selection(), "g", "vert", "scs")<CR>
+    nnoremap <silent> <plug>(quickr_cscope_global)            :call <SID>quickr_cscope(expand("<cword>"), "g", "", "cs")<CR><CR>
+    vnoremap <silent> <plug>(quickr_cscope_global)            :call <SID>quickr_cscope(<SID>get_visual_selection(), "g", "", "cs")<CR><CR>
+    nnoremap <silent> <plug>(quickr_cscope_global_split)      :call <SID>quickr_cscope(expand("<cword>"), "g", "", "scs")<CR><CR>
+    vnoremap <silent> <plug>(quickr_cscope_global_split)      :call <SID>quickr_cscope(<SID>get_visual_selection(), "g", "", "scs")<CR><CR>
+    nnoremap <silent> <plug>(quickr_cscope_global_vert_split) :call <SID>quickr_cscope(expand("<cword>"), "g", "vert", "scs")<CR><CR>
+    vnoremap <silent> <plug>(quickr_cscope_global_vert_split) :call <SID>quickr_cscope(<SID>get_visual_selection(), "g", "vert", "scs")<CR><CR>
 else
     nnoremap <silent> <plug>(quickr_cscope_global)            :cs find g <C-R>=expand("<cword>")<CR><CR>
     vnoremap <silent> <plug>(quickr_cscope_global)            :<C-U>cs find g <C-R>=<SID>get_visual_selection()<CR><CR>
