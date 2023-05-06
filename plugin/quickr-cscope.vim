@@ -179,25 +179,25 @@ vnoremap <silent> <plug>(quickr_cscope_assignments)     :call <SID>quickr_cscope
 " }}
 
 if g:quickr_cscope_keymaps
-    nmap <leader>g <plug>(quickr_cscope_global)
-    nmap <leader>s <plug>(quickr_cscope_symbols)
-    nmap <leader>c <plug>(quickr_cscope_callers)
-    nmap <leader>f <plug>(quickr_cscope_files)
-    nmap <leader>i <plug>(quickr_cscope_includes)
-    nmap <leader>t <plug>(quickr_cscope_text)
-    nmap <leader>d <plug>(quickr_cscope_functions)
-    nmap <leader>e <plug>(quickr_cscope_egrep)
-    nmap <leader>e <plug>(quickr_cscope_assignments)
+    nmap <C-\>g <plug>(quickr_cscope_global)
+    nmap <C-\>s <plug>(quickr_cscope_symbols)
+    nmap <C-\>c <plug>(quickr_cscope_callers)
+    nmap <C-\>f <plug>(quickr_cscope_files)
+    nmap <C-\>i <plug>(quickr_cscope_includes)
+    nmap <C-\>t <plug>(quickr_cscope_text)
+    nmap <C-\>d <plug>(quickr_cscope_functions)
+    nmap <C-\>e <plug>(quickr_cscope_egrep)
+    nmap <C-\>e <plug>(quickr_cscope_assignments)
 
-    vmap <leader>g <plug>(quickr_cscope_global)
-    vmap <leader>s <plug>(quickr_cscope_symbols)
-    vmap <leader>c <plug>(quickr_cscope_callers)
-    vmap <leader>f <plug>(quickr_cscope_files)
-    vmap <leader>i <plug>(quickr_cscope_includes)
-    vmap <leader>t <plug>(quickr_cscope_text)
-    vmap <leader>d <plug>(quickr_cscope_functions)
-    vmap <leader>e <plug>(quickr_cscope_egrep)
-    vmap <leader>e <plug>(quickr_cscope_assignments)
+    vmap <C-\>g <plug>(quickr_cscope_global)
+    vmap <C-\>s <plug>(quickr_cscope_symbols)
+    vmap <C-\>c <plug>(quickr_cscope_callers)
+    vmap <C-\>f <plug>(quickr_cscope_files)
+    vmap <C-\>i <plug>(quickr_cscope_includes)
+    vmap <C-\>t <plug>(quickr_cscope_text)
+    vmap <C-\>d <plug>(quickr_cscope_functions)
+    vmap <C-\>e <plug>(quickr_cscope_egrep)
+    vmap <C-\>e <plug>(quickr_cscope_assignments)
 endif
 
 " Use quickfix window for cscope results. Clear previous results before the search.
