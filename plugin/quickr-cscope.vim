@@ -60,6 +60,9 @@ function! s:autoload_db()
         call s:debug_echo('Trying to add the database file for program: ' . g:quickr_cscope_program)
         silent! execute "cs add " . db
         return 1
+    elseif $CSCOPE_DB != ""
+        silent! execute "cs add " . $CSCOPE_DB
+        return 1
     else
         call s:debug_echo('Database file not found.')
         return 0
